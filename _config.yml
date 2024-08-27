@@ -1,9 +1,9 @@
-title: "MavisMiniatures"
-author: "MavisMiniatures"
-description: "A searchable D&D 5e miniature list."
-url: "https://mavisminiatures.github.io"
-source-url: "https://github.com/MavisMiniatures/MavisMiniatures"
-baseurl: "/MavisMiniatures"
+title: "Bestiary"
+author: "chisaipete"
+description: "A searchable D&D 5e creature list."
+url: "https://chisaipete.github.io"
+source-url: "https://github.com/chisaipete/bestiary"
+baseurl: "/bestiary"
 exclude: ['Rakefile', 'README.md']
 collections:
   creatures:
