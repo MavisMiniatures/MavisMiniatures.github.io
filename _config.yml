@@ -3,7 +3,7 @@ author: "chisaipete"
 description: "A searchable D&D 5e creature list."
 url: "https://mavisminiatures.github.io"
 source-url: "https://github.com/MavisMiniatures/MavisMiniatures"
-baseurl: "/bestiary"
+baseurl: "/MavisMiniatures"
 exclude: ['Rakefile', 'README.md']
 collections:
   creatures:
