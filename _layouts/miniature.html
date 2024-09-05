@@ -1,0 +1,37 @@
+--- 
+layout: default 
+---
+<div class="post">
+  <div class="stat-block">
+    <hr class="orange-border" />
+    <div class="section-left">
+      <div class="creature-heading">
+	<h1>{{ page.name }}</h1>
+	<h2>{{ page.size }}</h2>
+      </div> <!-- creature heading -->
+      <svg height="5" width="100%" class="tapered-rule">
+	<polyline points="0,0 400,2.5 0,5"></polyline>
+      </svg>
+      <svg height="5" width="100%" class="tapered-rule top-gap bottom-gap">
+	<polyline points="0,0 400,2.5 0,5"></polyline>
+      </svg>
+      {{ content }}
+
+      <dl class="tag-list">
+	{% for tag in page.tags %}
+	<dd>
+	  <span class="tag">
+	    {% if tag contains 'cr' %}
+	    <a href="{{ site.baseurl }}/cr#{{ tag }}">{{tag}}</a> {% else %}
+	    <a href="{{ site.baseurl }}/tag/{{ tag }}">{{tag}}</a> {% endif %}
+	  </span>
+	</dd>
+	{% endfor %}
+	{% if page.page_number %}
+	<dd>(p. {{ page.page_number }})</dd>
+	{% endif %}
+      </dl>
+      <hr class="orange-border bottom" />
+    </div>
+  </div>
+</div>
