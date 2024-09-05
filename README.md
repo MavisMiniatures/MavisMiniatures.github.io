@@ -20,6 +20,23 @@ If you'd like to help fill out the rest of the creatures from the MM, for each n
 I've edited _config.yml for my own build purposes, but if you've got [Jekyll](http://jekyllrb.com) set up locally, the following should create the build from your friendly command line terminal:
 `jekyll serve -Vw --no-watch --baseurl ""`
 
+## Run localy with Jekyll
+1. Install Jekyll:
+If you haven’t already, install Jekyll and Bundler:
+`gem install jekyll bundler`
+
+2. Navigate to Your Project Directory:
+Open your terminal and navigate to your project directory:
+`cd path/to/your/project`
+
+3. Install Dependencies:
+Install the necessary dependencies:
+`bundle install`
+
+4. Serve Your Site:
+Start the Jekyll server:
+`bundle exec jekyll serve`
+
 ## Thanks
 
 Shoutout to Saph of http://ephe.github.io/grimoire from whom I've shamelessly borrowed the majority of the codebase
