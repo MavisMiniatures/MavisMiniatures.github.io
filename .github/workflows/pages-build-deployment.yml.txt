@@ -1,0 +1,25 @@
+name: Pages Build and Deployment
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the workflow
+  pull_request:
+    branches:
+      - main  # Change this to the branch you want to trigger the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add your build steps here
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
