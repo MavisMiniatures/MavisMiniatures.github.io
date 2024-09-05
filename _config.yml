@@ -12,6 +12,3 @@ collections:
   tags:
     output: true
     permalink: "/tag/:name"
-sass:
-  sass_dir: css
-  style: compressed
