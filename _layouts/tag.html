@@ -3,16 +3,34 @@ layout: default
 ---
 <div class="post">
   <h1 class="page-heading">{{ page.name }}</h1>
-  <p id="creatureSearch">Search by name: <input type="search" id="jetsSearch"></p>
-  {% assign all_creatures = site.creatures | where: 'tags', page.tag %}
-  {% assign cr-tags = "" | split: "" %}
-  {% for cr in site.data.challenge_ratings %}
-  {% assign tag = "cr" | append: cr %}
-  {% assign creatures = all_creatures | where: 'tags', tag %}
-  {% if creatures.size > 0 %}
-  {% assign tmp = cr | split: " " %}
-  {% assign cr-tags = cr-tags | concat: tmp %}
-  {% endif %}
-  {% endfor %}
-  {% include challenge_rating.html %}
+  <p id="creatureSearch">Search by name: <input type="search" id="jetsSearch" onkeyup="searchMiniatures()"></p>
+  <ul id="miniatureList">
+    {% assign all_miniatures = site.miniatures | where: 'tags', page.tag %}
+    {% assign sorted_miniatures = all_miniatures | sort: 'name' %}
+    {% for miniature in sorted_miniatures %}
+      <li class="miniature-item">
+        <a href="{{ miniature.url }}">{{ miniature.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
+<script>
+  function searchMiniatures() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('jetsSearch');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("miniatureList");
+    li = ul.getElementsByClassName('miniature-item');
+
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+</script>
+

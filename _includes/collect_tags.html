@@ -1,5 +1,5 @@
 {% assign rawtags = [] %}
-{% for creature in site.creatures %}
-{% assign rawtags = rawtags | uniq | concat: creature.tags %}
+{% for miniature in site.miniatures %}
+{% assign rawtags = rawtags | uniq | concat: miniature.tags %}
 {% endfor %}
 {% assign site.tags = rawtags %}

@@ -11,13 +11,13 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for creature in site.creatures limit:10 %}
+    {% for miniature in site.miniatures limit:10 %}
       <item>
-        <title>{{ creature.name | xml_escape }}</title>
-        <description>{{ creature.content | xml_escape }}</description>
-        <link>{{ creature.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ creature.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in creature.tags %}
+        <title>{{ miniature.name | xml_escape }}</title>
+        <description>{{ miniature.content | xml_escape }}</description>
+        <link>{{ miniature.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ miniature.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in miniature.tags %}
         <category>{{ tag | xml_escape }}</category>
         {% endfor %}
       </item>

@@ -37,6 +37,8 @@ Install the necessary dependencies:
 Start the Jekyll server:
 `bundle exec jekyll serve`
 
+You can live-load changes to the files using:
+`bundle exec jekyll serve --livereload --incremental`
 ## Thanks
 
 Shoutout to Saph of http://ephe.github.io/grimoire from whom I've shamelessly borrowed the majority of the codebase

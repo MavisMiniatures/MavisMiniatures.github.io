@@ -2,11 +2,11 @@
 layout: default
 ---
 {% assign letters = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" | split: ' ' %}
-{% assign all_creatures = site.creatures | sort: 'name' %}
+{% assign all_miniatures = site.miniatures | sort: 'name' %}
 <div class="home">
-  <h1 class="page-heading">All Creatures</h1>
+  <h1 class="page-heading">All Miniatures</h1>
   <p id="creatureSearch">Search by name: <input type="search" id="jetsSearch"></p>
-  <p id="sortBy">Sort By: <a href="{{ site.baseurl }}/cr">CR</a> | <a href="{{ site.baseurl }}/">Name</a></p>
+  <!-- <p id="sortBy">Sort By: <a href="{{ site.baseurl }}/cr">CR</a> | <a href="{{ site.baseurl }}/">Name</a></p> -->
 
   <dl class="tag-list">
     <dt class="spacing">Letter:</dt>
@@ -20,11 +20,11 @@ layout: default
   <a id="{{ letter }}"></a>
   <h2 class="post-list-head jetsHide">{{ letter }}</h2>
   <ul class="post-list jetsContent">
-    {% for creature in all_creatures %}
-    {% assign l = creature.name | slice: 0 %}
+    {% for miniatures in all_miniatures %}
+    {% assign l = miniatures.name | slice: 0 %}
     {% if l != letter %}{% continue %}{% endif %}
     <li>
-      <a class="post-link" href="{{ creature.url | prepend: site.baseurl }}">{{ creature.name }}</a>
+      <a class="post-link" href="{{ miniatures.url | prepend: site.baseurl }}">{{ miniatures.name }}</a>
     </li>
     {% endfor %}
   </ul>

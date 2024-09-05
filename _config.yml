@@ -5,6 +5,8 @@ url: "https://MavisMiniatures.github.io"
 source-url: "https://github.com/MavisMiniatures/MavisMiniatures.github.io"
 baseurl: ""  # Set to empty string
 exclude: ['Rakefile', 'README.md']
+livereload: true
+incremental: true
 collections:
   creatures:
     output: true
@@ -12,7 +14,7 @@ collections:
   tags:
     output: true
     permalink: "/tag/:name"
-  miniature:
+  miniatures:
     output: true
     permalink: /miniature/:name/
 
