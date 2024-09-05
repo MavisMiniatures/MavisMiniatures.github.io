@@ -12,3 +12,8 @@ collections:
   tags:
     output: true
     permalink: "/tag/:name"
+  miniature:
+    output: true
+    permalink: /miniature/:name/
+
+
