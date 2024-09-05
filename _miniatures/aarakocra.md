@@ -1,5 +1,4 @@
 ---
-title: Aarakocra
 layout: miniature
 name: "Aarakocra"
 tags: [medium, humanoid, cr1/4, monster-manual]
