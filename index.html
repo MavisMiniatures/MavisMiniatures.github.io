@@ -38,9 +38,11 @@
   </div>
 
   <script>
-    var jets = new Jets({
-      searchTag: '#jetsSearch',
-      contentTag: '.jetsContent'
+    document.addEventListener("DOMContentLoaded", function() {
+      var jets = new Jets({
+        searchTag: '#jetsSearch',
+        contentTag: '.jetsContent'
+      });
     });
   </script>
 </body>
