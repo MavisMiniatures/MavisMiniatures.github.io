@@ -34,54 +34,53 @@ layout: default
     </div>
   </div>
 </div> -->
----
-layout: default
----
 <div class="post">
-  <div class="stat-block">
-    <hr class="orange-border" />
-    <div class="section-left">
-      <div class="creature-heading">
-        <h1>{{ page.name }}</h1>
-        <h2>{{ page.size }}</h2>
-      </div>
-      <svg height="5" width="100%" class="tapered-rule">
-        <polyline points="0,0 400,2.5 0,5"></polyline>
-      </svg>
-      {{ content }}
-      <svg height="5" width="100%" class="tapered-rule top-gap bottom-gap">
-        <polyline points="0,0 400,2.5 0,5"></polyline>
-      </svg>
-      <dl class="tag-list">
-        {% for tag in page.tags %}
-        <dd>
-          <span class="tag">
-            {% if tag contains 'cr' %}
-            <a href="{{ site.baseurl }}/cr#{{ tag }}">{{tag}}</a> {% else %}
-            <a href="{{ site.baseurl }}/tag/{{ tag }}">{{tag}}</a> {% endif %}
-          </span>
-        </dd>
-        {% endfor %}
-        {% if page.page_number %}
-        <dd>(p. {{ page.page_number }})</dd>
-        {% endif %}
-      </dl>
-      <hr class="orange-border bottom" />
-    </div>
-  </div>
+<div class="stat-block">
+	<hr class="orange-border" />
+	<div class="section-left">
+	<div class="creature-heading">
+		<h1>{{ page.name }}</h1>
+		<h2>{{ page.size }}</h2>
+	</div>
+	<svg height="5" width="100%" class="tapered-rule">
+		<polyline points="0,0 400,2.5 0,5"></polyline>
+	</svg>
+	{{ content }}
+	<svg height="5" width="100%" class="tapered-rule top-gap bottom-gap">
+		<polyline points="0,0 400,2.5 0,5"></polyline>
+	</svg>
+	<dl class="tag-list">
+		{% for tag in page.tags %}
+		<dd>
+		<span class="tag">
+			{% if tag contains 'cr' %}
+			<a href="{{ site.baseurl }}/cr#{{ tag }}">{{tag}}</a> {% else %}
+			<a href="{{ site.baseurl }}/tag/{{ tag }}">{{tag}}</a> {% endif %}
+		</span>
+		</dd>
+		{% endfor %}
+		{% if page.page_number %}
+		<dd>(p. {{ page.page_number }})</dd>
+		{% endif %}
+	</dl>
+	<hr class="orange-border bottom" />
+	</div>
+</div>
 </div>
 
 <!-- Modal Structure -->
 <div id="modal" class="modal">
-  <span class="close" onclick="closeModal()">×</span>
-  <img class="modal-content" id="modalImage">
+<span class="close" onclick="closeModal()">×</span>
+<img class="modal-content" id="modalImage">
 </div>
+
+<img id="myImg" src="path/to/your/image.jpg" alt="Miniature" class="clickable-image" onclick="openModal()">
 
 <script>
 function openModal() {
   var modal = document.getElementById("modal");
   var modalImg = document.getElementById("modalImage");
-  var img = document.querySelector(".post img");
+  var img = document.getElementById("myImg");
   modal.style.display = "block";
   modalImg.src = img.src;
 }
@@ -90,4 +89,5 @@ function closeModal() {
   var modal = document.getElementById("modal");
   modal.style.display = "none";
 }
+
 </script>
