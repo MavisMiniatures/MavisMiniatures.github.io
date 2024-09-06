@@ -1,24 +1,18 @@
-# Bestiary
+# Mavis' Miniatures
 
-Bestiary is a mobile-friendly 5e compendium of creatures that organizes them in various classifications and strengths.
+Mavis' Miniatures is a mobile-friendly compendium of DnD miniatures that organizes them in various classifications.
 
-See the latest compiled build here: [http://chisaipete.github.io/bestiary/](http://chisaipete.github.io/bestiary/)
+The baseline Repo that was used is: https://github.com/Dr-Eigenvalue/bestiary
 
 ## To Do
-* Sort by location, sub-types, tags, CR, level, etc.
-* More Monsters from more sources!
+* Add more Miniatures!
+* Add a method for people to contribute.
+* Add the owner of the miniature to the miniatures page.
+* Add tags for owners.
+* Organize tags.
 
 ## Structure
-Creatures can be found inside `_posts/`. Each creature gets its own post, written and stored as a [Markdown](http://daringfireball.net/projects/markdown/basics) file. The date is arbitrary and never displayed, but still necessary for [Jekyll](http://jekyllrb.com) to process the posts properly.
-
-If you'd like to help fill out the rest of the creatures from the MM, for each new spell you make:
-
-1. Make a new post inside `_posts/` for each new creature, and copy the formatting from another creature.
-2. Submit a pull request for the creatures(s) when you're finished, and that's it! Thank you so much. :)
-
-## Build Instructions
-I've edited _config.yml for my own build purposes, but if you've got [Jekyll](http://jekyllrb.com) set up locally, the following should create the build from your friendly command line terminal:
-`jekyll serve -Vw --no-watch --baseurl ""`
+Miniatures can be found inside `_Miniatures/`. Images are stored externaly and included using an external link.
 
 ## Run localy with Jekyll
 1. Install Jekyll:
@@ -39,6 +33,4 @@ Start the Jekyll server:
 
 You can live-load changes to the files using:
 `bundle exec jekyll serve --livereload --incremental`
-## Thanks
 
-Shoutout to Saph of http://ephe.github.io/grimoire from whom I've shamelessly borrowed the majority of the codebase
