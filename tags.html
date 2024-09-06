@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody id="tagTableBody">
+        <!-- Rows will be populated by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // Sample data extracted from the .md file
+    const tags = [
+        {
+            name: "Aberrations",
+            tag: "aberration",
+            description: "This is a monster type"
+        }
+        // Add more tag objects as needed
+    ];
+
+    // Function to populate the table
+    function populateTable() {
+        const tableBody = document.getElementById('tagTableBody');
+        tags.forEach(tag => {
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            const link = document.createElement('a');
+            link.href = `${tag.tag}.html`;
+            link.textContent = tag.name;
+            nameCell.appendChild(link);
+
+            const descriptionCell = document.createElement('td');
+            descriptionCell.textContent = tag.description;
+
+            row.appendChild(nameCell);
+            row.appendChild(descriptionCell);
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Call the function to populate the table on page load
+    window.onload = populateTable;
+</script>
