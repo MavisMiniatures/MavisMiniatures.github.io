@@ -73,24 +73,41 @@ $statblock-background-color: #FDF1DC;
 }
 
 .button1 {
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    border: 2px solid #04AA6D;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #241c15;
+  background-color: #efeeea;
+  transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  padding: 0 18px;
+  :hover {
+      color: #241c15;
+      background-color: #d9d7cd;
   }
-  .button2 {
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    border: 2px solid #8b1404;
-    text-align: center;
-    text-decoration: none;
+}
+
+.button2 {
     display: inline-block;
-    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #f8dcc3;
+    background-color: #7a0505;
+    transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+    padding: 0 18px;
+    :hover {
+        color: #241c15;
+        background-color: #ad0202;
+    }
   }
