@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tag in site.tags %}
+        <tr>
+            <td><a href="{{ tag.url | prepend: site.baseurl }}">{{ tag.name }}</a></td>
+            <td>{{ tag.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
