@@ -72,6 +72,11 @@ $statblock-background-color: #FDF1DC;
     }
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .button1 {
   display: inline-block;
   outline: none;
@@ -86,10 +91,10 @@ $statblock-background-color: #FDF1DC;
   background-color: #efeeea;
   transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
   padding: 0 18px;
-  :hover {
-      color: #241c15;
-      background-color: #d9d7cd;
-  }
+}
+.button1:hover {
+    color: #241c15;
+    background-color: #d9d7cd;
 }
 
 .button2 {
@@ -105,9 +110,9 @@ $statblock-background-color: #FDF1DC;
     color: #f8dcc3;
     background-color: #7a0505;
     transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-    padding: 0 18px;
-    :hover {
-        color: #241c15;
-        background-color: #ad0202;
-    }
+    padding: 0 18px; 
   }
+  .button2:hover:after {
+    color: #241c15;
+    background-color: #ad0202;
+}
