@@ -12,7 +12,8 @@ The baseline Repo that was used is: https://github.com/Dr-Eigenvalue/bestiary
 * Organize tags.
 
 ## Structure
-Miniatures can be found inside `_Miniatures/`. Images are stored externaly and included using an external link.
+Miniatures can be found inside `_Miniatures/`. 
+Images are stored externaly and included using an external link. For example a shared link from google photos.
 
 ## Run localy with Jekyll
 1. Install Jekyll:
