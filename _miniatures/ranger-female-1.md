@@ -1,6 +1,6 @@
 ---
 layout: miniature
-name: "Ranger female 1"
+name: "Ranger Female 1"
 tags: [humanoid, monster-manual, medium, support, human, ranger, elf]
 size: Medium humanoid (Human)
 ---
