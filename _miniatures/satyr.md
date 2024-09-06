@@ -1,7 +1,7 @@
 ---
 layout: miniature
 name: "Satyr"
-tags: [fey, brute, monster-manual, cr4]
+tags: [fey, monster-manual, medium]
 size: Medium humanoid (aarakocra)
 ---
 
