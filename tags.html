@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<table border="1">
+<!-- <table border="1">
     <thead>
         <tr>
             <th>Name</th>
@@ -16,4 +16,16 @@ layout: default
         </tr>
         {% endfor %}
     </tbody>
-</table>
+</table> -->
+{% assign collections = site.collections | where: "label", "tags" %}
+{% for collection in collections %}
+  <h2>{{ collection.label | capitalize }}</h2>
+  <table>
+    {% for item in collection.docs %}
+    <tr>
+        <td><a href="{{ item.url | prepend: site.baseurl }}">{{ item.data.title }}</a></td>
+        <td>{{ item.data.description }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endfor %}
